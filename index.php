@@ -10,60 +10,36 @@
     
     <!--Пользовательские стили-->
     <link rel="stylesheet" href="css/style.css">
-    <title>Регистрация</title>
+    <title>Cryptobot by Sidvert Develop</title>
 </head>
 
-<body class="text-center">
-    <?php 
-    require('connect.php');
+<body>
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+                </a>
 
-    if(isset($_POST['username']) && isset($_POST['password'])){
-        $username = $_POST['username'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+                <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
+                <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+                <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+                <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+                </ul>
 
-        $query = "INSERT Users(username, email, password) VALUES('$username', '$email', '$password')"; 
-        /* $query = "INSERT INTO Users SET username = '$username' , email = '$email', password = '$password'"; */
-        $result = mysqli_query($connection, $query);
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+                </form>
 
-        if($result){
-            $smsg = "Регистрация прошла успешно";
-        }else{
-            $fmsg = "Ошибка регистрации";
-        }
-    }
-    ?>
-    <main class="form-signin w-100 m-auto">
-        <form method="POST">
-            <h1 class="h3 mb-3 fw-normal">Регистрация</h1>
-            
-            <?php if(isset($smsg)){?> <div class="alert alert-success" role="alert"><?php echo $smsg;?></div><?php }?>
-            <?php if(isset($fmsg)){?> <div class="alert alert-danger" role="alert"><?php echo $fmsg;?></div><?php }?>
-            <div class="form-floating">
-                <input name ="username" type="text" class="form-control" id="floatingName" placeholder="name">
-                <label for="floatingName">Имя пользователя</label>
+                <div class="text-end">
+                <button type="button" class="btn btn-outline-light me-2">Login</button>
+                <button type="button" class="btn btn-warning">Sign-up</button>
             </div>
-
-            <div class="form-floating">
-                <input name="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Электронная почта</label>
-            </div>
-
-            <div class="form-floating">
-                <input name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                <label for="floatingPassword">Пароль</label>
-            </div>
-            <!--
-            <div class="checkbox mb-3">
-                <label>
-                    <input type="checkbox" value="remember-me"> Запомнить меня
-                </label>
-            </div>
-
-            -->
-            <button class="w-100 btn btn-lg btn-primary mt-3 pt-3 pb-3" type="submit">Зарегистрироваться</button>
-        </form>
-    </main>
+      </div>
+    </div>
+  </header>
 
     <!--<script src="js/script.js"></script>-->
 </body>
