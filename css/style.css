@@ -1,0 +1,23 @@
+header{
+    background-color: #2C1B47;
+}
+
+#reg_button{
+    background-color: #9356A0;
+    border: none;
+    color: #DCCAE9;
+    padding: 7px;
+}
+
+#reg_button:hover{
+    background-color: #724C9D;
+}
+
+#auth_button{
+    color: #DCCAE9;
+    border-color: #DCCAE9;
+}
+
+#auth_button:hover{
+    color: #2C1B47;
+}
