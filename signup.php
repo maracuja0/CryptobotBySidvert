@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     
     <!--Пользовательские стили-->
-    <link rel="stylesheet" href="css/reg.css">
+    <link rel="stylesheet" href="css/signup.css">
     <title>Регистрация</title>
 </head>
 
@@ -40,7 +40,7 @@
 
         if (mb_strlen($data['name']) < 3 || mb_strlen($data['name']) > 50) $errors[] = "Недопустимая длина имени";
     
-        if (mb_strlen($data['family']) < 5 || mb_strlen($data['family']) > 50) $errors[] = "Недопустимая длина фамилии";
+        if (mb_strlen($data['surname']) < 5 || mb_strlen($data['surname']) > 50) $errors[] = "Недопустимая длина фамилии";
 
         if (mb_strlen($data['password']) < 8) $errors[] = "Недопустимая длина пароля (не менее 8 символов)";
 
@@ -53,15 +53,17 @@
             $surname = $_POST['surname'];
             $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-            mysqli_query($connection, "INSERT INTO Users(`login`, `email`, `name`, `surname`, `password`) VALUES($login, $email, $name, $surname, $password)");
+            mysqli_query($db, "INSERT INTO users(login, email, name, surname, password) VALUES('" . $login . "','" . $email . "','" . $name . "','" . $surname . "', '" . $password . "')");
+        }else{
+            echo $errors;
         }
     }
     ?>
     <main class="form-signin w-100 m-auto">
-        <form method="POST">
+        <form method="POST" action="index.php">
             <img src="img/logo.png">
             <h1 class="h3 mb-3 fw-normal">Регистрация</h1>
-            
+
             <div class="form-floating">
                 <input name ="login" type="text" class="form-control" id="floatingName" placeholder="login">
                 <label for="floatingName">Ведите логин</label>

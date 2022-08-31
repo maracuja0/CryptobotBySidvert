@@ -1,3 +1,3 @@
 <?php
-$connection = mysqli_connect("localhost", "root", "", "CryptobotbySidvert");
+$db = mysqli_connect("localhost", "root", "", "CryptobotbySidvert");
 ?>
