@@ -32,13 +32,13 @@
                 
                     <div class="row">
                         <div class="col-sm">
-                            <form action="scripts/auth.php" method="POST">
+                            <form action="login.php" method="POST">
                                 <button id="auth_button"name = "auth" type="submit" class="btn btn-outline-light me-2">Войти</button>
                             </form>
                         </div>
 
                         <div class="col-sm">
-                            <form action="scripts/reg.php" method="POST">
+                            <form action="signup.php" method="POST">
                                 <button id="reg_button" name = "reg "type="submit" class="btn btn-warning">Зарегистрироваться</button>
                             </form>
                         </div>

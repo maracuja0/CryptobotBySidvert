@@ -15,7 +15,7 @@
 
 <body class="text-center">
     <?php 
-    require('connect.php');
+    require('db.php');
 
     if(isset($_POST['username']) && isset($_POST['password'])){
         $username = $_POST['username'];

@@ -1,0 +1,88 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #2C1B47;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+}
+
+.form-signin h1, .form-signin .checkbox{
+    color: #DCCAE9;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.form-signin input:focus{
+    outline: 2px solid #9356A0;
+    box-shadow: none;
+}
+
+.form-signin input[name="password"] {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[name="password_2"] {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: none;
+}
+
+.form-signin input[id="floatingInput"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.form-signin input[name="login"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin button{
+    background-color: #9356A0;
+    border: none;
+}
+
+.form-signin button:hover{
+    background-color: #724C9D;
+}
+p{
+  color: #DCCAE9;
+}
+a{
+  color: #DCCAE9;
+}
+
+a:hover{
+  color: white;
+}
+
+img{
+  width: 150px;
+  height: 120px;
+}
